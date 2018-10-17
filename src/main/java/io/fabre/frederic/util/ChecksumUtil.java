@@ -5,13 +5,30 @@ import java.security.DigestInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * The type Checksum util.
+ */
 public class ChecksumUtil {
 
+    /**
+     * Gets md5 checksum.
+     *
+     * @param filePath the file path
+     * @return the md 5 checksum
+     * @throws ChecksumException the checksum exception
+     */
     public static String getMD5Checksum(final String filePath)
             throws ChecksumException {
         return getChecksum("MD5", filePath);
     }
 
+    /**
+     * Gets sha256 checksum.
+     *
+     * @param filePath the file path
+     * @return the sha 256 checksum
+     * @throws ChecksumException the checksum exception
+     */
     public static String getSHA256Checksum(final String filePath)
             throws ChecksumException {
         return getChecksum("SHA-256", filePath);

@@ -20,7 +20,7 @@ public class ChecksumBenchmark {
     @Fork(value = 1)
     @Warmup(iterations = 2)
     @Measurement(iterations = 5)
-    public void MD5_pdf_8mo() {
+    public void MD5_pdf_8MB() {
         try {
             ChecksumUtil.getMD5Checksum("src/main/resources/io/fabre/frederic/test.pdf");
         } catch (ChecksumException e) {
@@ -34,7 +34,7 @@ public class ChecksumBenchmark {
     @Fork(value = 1)
     @Warmup(iterations = 2)
     @Measurement(iterations = 5)
-    public void SHA256_pdf_8mo() {
+    public void SHA256_pdf_8MB() {
         try {
             ChecksumUtil.getSHA256Checksum("src/main/resources/io/fabre/frederic/test.pdf");
         } catch (ChecksumException e) {
@@ -42,13 +42,14 @@ public class ChecksumBenchmark {
         }
     }
 
+
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Fork(value = 1)
     @Warmup(iterations = 2)
     @Measurement(iterations = 5)
-    public void MD5_image_337kb() {
+    public void MD5_image_337KB() {
         try {
             ChecksumUtil.getMD5Checksum("src/main/resources/io/fabre/frederic/test.jpg");
         } catch (ChecksumException e) {
@@ -62,7 +63,7 @@ public class ChecksumBenchmark {
     @Fork(value = 1)
     @Warmup(iterations = 2)
     @Measurement(iterations = 5)
-    public void SHA256_image_337kb() {
+    public void SHA256_image_337KB() {
         try {
             ChecksumUtil.getSHA256Checksum("src/main/resources/io/fabre/frederic/test.jpg");
         } catch (ChecksumException e) {
